@@ -1,0 +1,28 @@
+header .logo-link {
+  text-transform: lowercase;
+}
+
+.opensourceinfo {
+  background-color: #ffaa2d;
+  color: black;
+}
+
+section.opensourceinfo div.container div.row div.col-md-6 h2 {
+  color: #238bca;
+}
+
+.red-separator {
+  background: #ba2828;
+  height: 6rem;
+}
+
+.enter-draw-button {
+  background: #ba2828;
+  padding: 13px;
+  border-radius: 25px;
+  color: white;
+}
+
+section#s-1219 .grid.width-33 .grid-item {
+  width: 10rem;
+}
