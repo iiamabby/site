@@ -67,8 +67,8 @@ def save_issues_to_json(issues, output_file):
         json.dump(issues, json_file, indent=4)
 
 def main():
-    username = 'iiamabby'
-    repository = 'community-webpage'
+    username = 'cloudnative-nz'
+    repository = 'site'
     output_file = 'good_first_issues.json'
 
     #first we find and store the issues
