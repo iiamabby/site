@@ -30,15 +30,14 @@ Most open source projects use GitHub for collaboration. Create a GitHub account 
 
 ## Contributing to cloudnative.nz 
 
-### Step 5: Write a Blog Post
+### Step 5: Downloading the source code
 For this site follow these steps to start contributing:
 
 - Create a github account 
 - Fork this repo 
-- Use `git clone https://github.com/cloudnative-nz/site.git` to pull down this repo to your device 
+- Run `git clone https://github.com/cloudnative-nz/site.git` in your command line to pull down this repo to your device 
 - Run this website by opening the index.html file from your file explorer
-- View the issues and decide on which one to work through
-- To add your changes make a PR request, we will view and merge your code 
+- View the issues and decide on which one to work through, ask questions in the thread if you have some or need assistance working through it 
 
 
 ### Step 6: Submit a Pull Request
