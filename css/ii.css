@@ -1,14 +1,18 @@
+p, li{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
 header .logo-link {
   text-transform: lowercase;
 }
 
 .opensourceinfo {
-  background-color: #ffaa2d;
+  background-color: var(--teal);
   color: black;
 }
 
 section.opensourceinfo div.container div.row div.col-md-6 h2 {
-  color: #238bca;
+  color: var(--purple);
 }
 
 .red-separator {
@@ -135,3 +139,92 @@ color: var(--orange);
 line-height: 28px
 }
 
+/* Pathway styling */
+#pathwayCanvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 500px;
+  left:50px;
+  top:-190px;
+  margin-bottom: 0;
+  padding: 0 !important;
+  height: calc(100vh - 20px)
+}
+/* issue section */
+.issue-card {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* tips  */
+.tip {
+  position: relative!;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.tip::before {
+  content: "💡"; /* Lightbulb icon */
+  margin-right: 5px;
+}
+
+.tip .tiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: -35px; /* Position the tip above the word */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%; 
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.tip:hover .tiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--teal);
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.box h3 {
+  margin-top: 0;
+}
+.m-50{
+  margin:50px;
+}
+.light-text{
+  font-weight: 200;
+  font-size: 20pt;
+}

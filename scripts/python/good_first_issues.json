@@ -1,0 +1,26 @@
+[
+    {
+        "issue_number": 3,
+        "title": "Making soup",
+        "link": "https://github.com/iiamabby/community-webpage/issues/3",
+        "user": "iiamabby",
+        "date_created": "2023-07-29T00:07:10Z",
+        "first_comment": "Checking that the file is correctly writing all new issues when automated"
+    },
+    {
+        "issue_number": 2,
+        "title": "still a test",
+        "link": "https://github.com/iiamabby/community-webpage/issues/2",
+        "user": "iiamabby",
+        "date_created": "2023-07-28T23:24:17Z",
+        "first_comment": "The previous one was correctly identified, lets see if we can pull in the comments swell"
+    },
+    {
+        "issue_number": 1,
+        "title": "testing scraper",
+        "link": "https://github.com/iiamabby/community-webpage/issues/1",
+        "user": "iiamabby",
+        "date_created": "2023-07-28T23:22:17Z",
+        "first_comment": "this is a test good first issues"
+    }
+]

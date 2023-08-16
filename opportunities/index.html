@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-    
+    <!-- NEED TO PUT A LINK TO CODER SPACES AT SPACE.CLOUDNATIVE.NZ-->
+    <!-- ALSO NEEDS TO LINK THROUGH TO COMMUNITY AND ABOUT PAGE-->
     <!-- Mirrored from localhost:44366/opportunities/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Aug 2022 01:44:59 GMT -->
     <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
     <head>
@@ -10,19 +11,19 @@
         <title>Opportunities - Āheinga</title>
         <meta name="description" content="">
         <meta name="author" content="">
-
+        <link rel="icon" type="image/png" href="../images/hwen.png">
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../css/styles.minfa45.css?ud=8">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
         <link rel="stylesheet" type="text/css" href="../css/ii.css">
-
         
     </head>
     <body data-id="1178" itemscope itemtype="http://schema.org/WebPage">
         <div class="top-wrapper">
-
-
 
             <header class="fixed" role="banner" itemscope itemtype="http://schema.org/WPHeader">
                 <div class="container">
@@ -73,9 +74,7 @@
                 </div>
             </header>
 
-
-
-            <div class="hero dark parallax text-center overlay show-header" data-overlay-dark="0" data-background="../media/4ivjo55h/pfg_84518d04.jpg?anchor=center&amp;mode=crop&amp;width=1910&amp;height=750&amp;rnd=133046604881500000&amp;quality=80">
+            <div class="hero dark parallax text-center overlay show-header" data-overlay-dark="0" data-background="../images/firefly2clouds.jpg?anchor=center&amp;mode=crop&amp;width=1910&amp;height=750&amp;rnd=133046604881500000&amp;quality=80">
                 <div class="container  dark">
                     <div class="box-text box-text-slider">
                         <div>
@@ -96,46 +95,38 @@
         </div>
 
         <div class="main-wrapper" itemscope itemprop="mainContentOfPage">
-            <section>
-                <div class="container " itemscope itemtype="http://schema.org/WPHeader">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box-text">
-                                <h2>Available now</h2>
-                                <p>
-                                    <strong>Take a look at what's going on now!</strong>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 box-image">
-                            <div class="imagesDiv">
-                                <a href="https://contribute.cncf.io" data-lightbox="Gallery">
-                                    <img src="../media/contribute-cncf-io.png" class="img-responsive">
-                                    <p>Contribute to the CNCF</p>
-                                </a>
-                                <a href="https://www.meetup.com/login/?returnUri=https%3A%2F%2Fwww.meetup.com%2Fcloudnative-nz%2Fevents%2F287343698" data-lightbox="Gallery">
-                                    <img src="../media/certified-for-kubernetes.png" class="img-responsive">
-                                    <p>Become certified in Kubernetes</p>
-                                </a>
-                                <a href="" data-lightbox="Gallery">
-                                    <img src="../media/win-rpi.png" class="img-responsive">
-                                    <p>Win a Raspberry Pi 400</p>
-                                </a>
-                            </div>
-                            <div class="staticImages">
-                            </div>
-                            <div class="slider-for">
-                            </div>
-                            <div class="slider-nav">
-                            </div>
-                        </div>
-                    </div>
+           <!--  
+            <section class="text-center">
+                <h2 class="styled">Pathways For The Cloud (branch) <span></span></h2>
+                <div class="pathway-container">
+                    <canvas id="pathwayCanvas"></canvas>
                 </div>
-            </section>
-
+            </section> -->
+            <section class="text-center">
+                <h2 class="styled">Pathways For The Cloud <span></span></h2>
+                <div class="container ">
+                  <div class="row justify-content-between align-items-center fadeInUp">
+                    <div id="sunburstchart" class="col-md-6 col-lg-4 mb-4 mb-md-0"></div>
+                    <div id="information" class="col-md-6 col-lg-4 text-left">
+                      <h3 id="title">Click on a piece of the pie!</h3>
+                      <p id="description">
+                        Use the sunburst diagram to explore career opportunities for cloud computing, each section of the pie has learning resources to get you started.
+                        This is the description text that can be zoomed in for better accessibility.
+                      </p>
+                      <ul id="resources"></ul>
+                      <button id="zoomTextBtn" aria-label="Zoom In Text">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 16c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-3.2l.8-2.8h-1.6l.8-2.8h-1.6L12 6l-.8 2.8h-1.6l.8 2.8H9l-.8 2.8h1.6l-.8 2.8h1.6zm.2-7.3l-.4 1.3h-.9l-.4-1.3c-.1-.2-.3-.3-.5-.3s-.4.1-.5.3l-.4 1.3h-.9l-.4-1.3c-.1-.2-.3-.3-.5-.3s-.4.1-.5.3l-.4 1.3H6l.7-2.4c.2-.5.8-.9 1.4-.9h.4c.6 0 1.2.4 1.4.9l.7 2.4h-.9l-.4-1.3zm.5 4.1c0 .4-.3.7-.7.7h-1c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7h1c.4 0 .7.3.7.7zm1.8-.1c-.2-.5-.8-.9-1.4-.9h-.4c-.6 0-1.2.4-1.4.9l-.7 2.4h.9l.4-1.3c.1-.2.3-.3.5-.3s.4.1.5.3l.4 1.3h.9l.4-1.3c.1-.2.3-.3.5-.3s.4.1.5.3l.4 1.3h.9l-.7-2.4z"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
             <section class="rte-columns   text-center  " id="s-1265">
                 <div class="box-container container">
-                    <div class="container intro wow fadeInUp " data-wow-delay="0.3s">
+                    <div class="container intro wow fadeInUp " data-wow-delay="0.1s">
                         <h2 class="styled">Mentorships &amp; Internships <span></span></h2>
 
                     </div>
@@ -145,16 +136,12 @@
                                 <div class="box-image"><p class="max-width-100"><img src="../media/cizn3zrt/googlea047.png?mode=max&amp;height=130"></p></div>
                                 <h4><a rel="noopener" href="https://summerofcode.withgoogle.com/" target="_blank">Google Summer of Code</a></h4>
                                 <p>An international annual program in which Google awards stipends to contributors who successfully complete a free and open-source software coding project during the summer.</p>
-                            </div><div class="grid-item wow fadeInUp" data-wow-delay="0.9s">
+                            </div><div class="grid-item wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="box-image"><p class="max-width-100"><img src="../media/r1zcgdli/linuxfcec.png?mode=max&amp;height=60" /></p></div>
                                 <h4><a rel="noopener" href="https://lfx.linuxfoundation.org/tools/mentorship/" target="_blank">LFX Mentorship</a></h4>
                                 <p>Get involved in the Linux Foundation’s leading mentorship programme, designed to help train the next generation of open source developers, supported through sponsorship and specialised industry training.</p>
                                 <p><em>(Currently being adapted for participants in the Southern Hemisphere). </em></p>
-                            </div><div class="grid-item wow fadeInUp" data-wow-delay="1.2s">
-                                <div class="box-image"><p class="max-width-100"><img src="../media/p03othvy/outreachy9692.png?mode=max&amp;height=90" /></p></div>
-                                <h4><a rel="noopener" href="https://www.outreachy.org/" target="_blank">Outreachy</a></h4>
-                                <p>Outreachy provides internships in open source and open science to people subject to systemic bias and impacted by underrepresentation in the technical industry where they are living.</p>
-                            </div>            </div>
+                            </div>          </div>
                     </div>
                 </div>
             </section>
@@ -168,17 +155,17 @@
                     </div>
                     <div class="container ">
                         <div class="grid width-33 pad-md">
-                            <div class="grid-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="grid-item wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="box-image"><p class="max-width-100"><img src="../media/k0hg3sp5/lfx98b0.png?mode=max&amp;height=50"></p></div>
                                 <h4><a rel="noopener" href="https://training.linuxfoundation.org/training/kubernetes-and-cloud-native-essentials-lfs250/" target="_blank">KCNA Essentials Course</a></h4>
                                 <p>This course provides an overview of cloud native technologies and how container orchestration systems like Kubernetes can help to implement and maintain them.</p>
                                 <p><em>*</em><em>Ask about sponsored access for Māori cohorts</em></p>
-                            </div><div class="grid-item wow fadeInUp" data-wow-delay="0.9s">
+                            </div><div class="grid-item wow fadeInUp" data-wow-delay="0.4s">
                                 <div class="box-image"><p class="max-width-100"><img src="../media/km1dhcr1/kcna-logo-300x300a047.png?mode=max&amp;height=130"></p></div>
                                 <h4><a rel="noopener" href="https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/" target="_blank">Kubernetes Cloud Native Associate (Exam)</a></h4>
                                 <p>The KCNA exam demonstrates a user’s foundational knowledge and skills in Kubernetes and the wider cloud native ecosystem.</p>
                                 <p><em>*</em><em>Ask about sponsored access for Māori cohorts</em></p>
-                            </div><div class="grid-item wow fadeInUp" data-wow-delay="1.2s">
+                            </div><div class="grid-item wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="box-image"><p class="max-width-100"><img src="../media/tjkkzd4q/edx98b0.png?mode=max&amp;height=50"></p></div>
                                 <h4><a rel="noopener" href="https://www.edx.org/course/introduction-to-kubernetes" target="_blank">EDX Essentials Course</a></h4>
                                 <p>Want to learn Kubernetes for free? Get an in-depth primer on this powerful system for managing containerised applications.</p>
@@ -186,7 +173,13 @@
                     </div>
                 </div>
             </section>
-
+            <section>
+                <div class="container">
+                    <h2 class="styled">Good First Issues <span></span></h2>
+                    <p>Get involved with open source today by contributing to this website</p>
+                    <div id="issuesContainer"></div>
+                </div>
+            </section>
 
             <section class="rte-columns  no-padding-top text-center  " id="s-1281">
                 <div class="box-container container">
@@ -376,6 +369,13 @@
         </div>
 
         <script src="../scripts/main.js"></script>
+        <!--<script src="../scripts/pathway.js"></script>-->
+        <script src="../scripts/pathpie.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+        <script src="../scripts/accesabilty.js"></script>
+        <script src="../scripts/firstissues.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <script src="../scripts/imageFillColumn2896.js?cdv=911708400" type="text/javascript"></script>
     </body>
 
