@@ -28,29 +28,24 @@ Follow the project's instructions to set up your development environment. This m
 
 Most open source projects use GitHub for collaboration. Create a GitHub account if you don't have one already.
 
-## Contributing to the Website
+## Contributing to cloudnative.nz 
 
 ### Step 5: Write a Blog Post
-
-We encourage you to write your own blog posts on topics related to open source, web development, cloud computing, or any technology in this space. Share your knowledge and experiences with the community. Once your blog post is ready, follow the project's guidelines for submitting it.
-
 For this site follow these steps to start contributing:
 
 - Create a github account 
 - Fork this repo 
-- Use `git clone <url>` to pull down this repo to your device 
-- Run this website by opening the index.html file 
+- Use `git clone https://github.com/cloudnative-nz/site.git` to pull down this repo to your device 
+- Run this website by opening the index.html file from your file explorer
+- View the issues and decide on which one to work through
 - To add your changes make a PR request, we will view and merge your code 
 
-### Step 6: Add Your Blog Post
 
-Fork the project's repository on GitHub and create a new branch for your changes. Add your blog post to the appropriate section of the website, whether it's under "Blog," "Tutorials," or any other relevant category. Write a brief description of your post and include any necessary images or assets.
-
-### Step 7: Submit a Pull Request
+### Step 6: Submit a Pull Request
 
 When your changes are ready, submit a pull request to the original project repository. A pull request is a request to merge your changes into the main codebase. Be sure to follow the project's contribution guidelines and provide a clear description of your changes.
 
-### Step 8: Engage with the Community
+### Step 7: Engage with the Community
 
 Engage with the community by participating in discussions, commenting on issues, and helping other contributors. Collaboration is a key aspect of open source, and being an active community member enhances your open source experience.
 
