@@ -35,9 +35,9 @@ For this site follow these steps to start contributing:
 
 - Create a github account 
 - Fork this repo 
-- Run `git clone https://github.com/cloudnative-nz/site.git` in your command line to pull down this repo to your device 
+- Run `git clone https://github.com/<yourusername>/site.git` in your command line to pull down the forked repo to your device 
 - Run this website by opening the index.html file from your file explorer
-- View the issues and decide on which one to work through, ask questions in the thread if you have some or need assistance working through it 
+- View the issues and decide on which one to work through, ask questions or ask for assistance in the thread of the issue if you need to.
 
 
 ### Step 6: Submit a Pull Request
