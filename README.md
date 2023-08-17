@@ -26,15 +26,15 @@ Follow the project's instructions to set up your development environment. This m
 
 ### Step 4: Create a GitHub Account
 
-Most open source projects use GitHub for collaboration. Create a GitHub account if you don't have one already.
+Many open-source projects use the collaborative power of GitHub. If you want to contribute to these projects you need to set up a GitHub account at [GitHub](www.github.com) Choose your username carefully, as that would be your "band" in the open-source community.
 
 ## Contributing to cloudnative.nz 
 
 ### Step 5: Downloading the source code
 For this site follow these steps to start contributing:
 
-- Create a github account 
-- Fork this repo 
+- Create a [GitHub](www.github.com) account 
+- [Fork](https://github.com/cloudnative-nz/site) this repo 
 - Run `git clone https://github.com/<yourusername>/site.git` in your command line to pull down the forked repo to your device 
 - Run this website by opening the index.html file from your file explorer
 - View the issues and decide on which one to work through, ask questions or ask for assistance in the thread of the issue if you need to.
