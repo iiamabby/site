@@ -60,7 +60,7 @@ If your ideas are well-received, implement the changes by adding new pages or se
 
 ### Step 11: Submit Another Pull Request
 
-Once your changes are ready, submit another pull request with the new content. Remember to document your additions and explain their purpose in the pull request description.
+Once your changes are ready, submit another pull request with the new content. Remember to document your additions and explain their purpose in the pull request description, aswell as link you issue to the pull request to help everyone keep track of the work.
 
 ## Conclusion
 
