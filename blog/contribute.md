@@ -29,8 +29,6 @@ Replace `yourusername` with your GitHub username and `yourproject` with the name
 
 Create a new branch for your changes. Use a descriptive name for the branch that reflects the purpose of your blog post.
 
-
-
 ### Step 4: Write Your Blog Post
 
 Write your blog post in Markdown format. You can use any Markdown editor of your choice. Make sure to save the file with an appropriate name, such as `my-blog-post.md`.
