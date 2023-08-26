@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+<br><br>
+{{ .Content }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- partial "hero.html" . -}}
+        {{- block "main" . }}
+        {{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+        {{- partial "modal.html" . -}}
+        {{- partial "script.html" . -}}
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<header class="fixed" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <a class="logo-link wow fadeInLeft" href="/">
+            <img src="{{ "images/hwen.png" | relURL }}" alt="cloudnative.nz" />
+            <span>cloudnative.nz</span>
+        </a>
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay"></div>
+        <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <ul>
+                <li data-wow-delay="0.3s" class="menu-item visible main-link {{ if .IsHome }}active{{ end }}">
+                    <a itemprop="url" href="{{ .Site.BaseURL }}"><span itemprop="name">Home</span></a>
+                </li>
+                <li data-wow-delay="0.4s" class="menu-item visible main-link {{ if eq .Section "about" }}active{{ end }}">
+                    <a itemprop="url" href="{{ .Site.BaseURL }}/about/"><span itemprop="name">About</span></a>
+                </li>
+                <li data-wow-delay="0.5s" class="menu-item visible main-link {{ if eq .Section "opportunities" }}active{{ end }}">
+                    <a itemprop="url" href="{{ .Site.BaseURL }}/opportunities/"><span itemprop="name">Opportunities</span></a>
+                </li>
+                <li data-wow-delay="0.5s" class="menu-item visible main-link {{ if eq .Section "community" }}active{{ end }}">
+                    <a itemprop="url" href="{{ .Site.BaseURL }}/community/"><span itemprop="name">Community</span></a>
+                </li>
+                <li data-wow-delay="0.6s" class="menu-item visible main-link">
+                    <!-- TODO build out the blog -->
+                    <!-- <a itemprop="url" href="{{ .Site.BaseURL }}/blog/"><span itemprop="name">Blog</span></a> -->
+                </li>
+            </ul>
+            
+        </nav>
+
+            <a href="contact/index.html" class="wow fadeInRight btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact</a>
+    </div>
+</header>

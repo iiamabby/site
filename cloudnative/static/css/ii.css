@@ -1,0 +1,230 @@
+p, li{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+  header .logo-link {
+    text-transform: lowercase;
+  }
+  
+  .opensourceinfo {
+    background-color: var(--teal);
+    color: black;
+  }
+  
+  section.opensourceinfo div.container div.row div.col-md-6 h2 {
+    color: var(--purple);
+  }
+  
+  .red-separator {
+    background: #ba2828;
+    height: 6rem;
+  }
+  
+  .enter-draw-button {
+    background: #ba2828;
+    padding: 13px;
+    border-radius: 25px;
+    color: white;
+  }
+  
+  section#s-1219 .grid.width-33 .grid-item {
+    width: 10rem;
+  }
+  .menu-item-dark>li>a {
+    color: rgb(192, 192, 192);
+  }
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-buttons {
+    position: relative;
+    width:100%;
+    height:100%;
+  }
+  #next-button{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top:140px;
+    right:20px;
+    z-index: 10;
+    width:50px;
+    height:50px;
+  }
+  #prev-button{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top:140px;
+    left:20px;
+    z-index: 10;
+    width:50px;
+    height:50px;
+  }
+  .slider {
+    width:auto;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  .slider-img{
+    width:500px;
+    height:400px;
+  }
+  
+  .slider img {
+    height: auto;
+    margin-right: 10px;
+  }
+  .image-main{
+    width:50%;
+  }
+  .image-main > img{
+    width:100%;
+    height:100%;
+  }
+  blockquote {
+    border-left: 10px solid var(--purple);
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: var(--purple);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+  ul{
+    display: block;
+    text-decoration: dotted;
+    list-style: circle !important;
+  }
+  .counterinfo{
+    background-color: var(--info);
+    height:100%;
+    position: relative;
+    top:65px;
+  }
+  
+  .counter-box {
+  display: block;
+  padding: 40px 20px 37px;
+  text-align: center
+  }
+  
+  .counter-box p {
+  margin: 5px 0 0;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 500
+  }
+  
+  
+  .counter { 
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 28px
+  }
+  
+  /* Pathway styling */
+  #pathwayCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-height: 500px;
+    left:50px;
+    top:-190px;
+    margin-bottom: 0;
+    padding: 0 !important;
+    height: calc(100vh - 20px)
+  }
+  /* issue section */
+  .issue-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  /* tips  */
+  .tip {
+    position: relative!;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .tip::before {
+    content: "💡"; /* Lightbulb icon */
+    margin-right: 5px;
+  }
+  
+  .tip .tiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -35px; /* Position the tip above the word */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%; 
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+  }
+  
+  .tip:hover .tiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  .box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--teal);
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .box h3 {
+    margin-top: 0;
+  }
+  .m-50{
+    margin:50px;
+  }
+  .light-text{
+    font-weight: 200;
+    font-size: 20pt;
+  }
