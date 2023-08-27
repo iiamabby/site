@@ -22,8 +22,11 @@
 
          const hr = document.createElement('hr');
 
-         const firstComment = document.createElement('p');
-         firstComment.textContent = issue.first_comment;
+        const firstComment = document.createElement('p');
+        const words = issue.first_comment.split(' ');
+        // Select the first 50 words
+        const limitedText = words.slice(0, 50).join(' ') + " ...";
+        firstComment.textContent = limitedText;
 
          const viewButton = document.createElement('a');
          viewButton.className = 'btn btn-primary';
