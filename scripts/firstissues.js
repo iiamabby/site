@@ -43,7 +43,7 @@
          issuesContainer.appendChild(issueCard);
      });
  })
- .catch(error => console.error('Error fetching data:', error));
+ .catch();
 
 // Function to generate random colors for issue cards
 function getRandomColor() {
