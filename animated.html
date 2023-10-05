@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Slanted Squares Path</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width:80%;
+        }
+
+        .square {
+            width: 300px;
+            height: 100px;
+            background-image: linear-gradient(#3498db, #1374b4);
+            clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
+        }
+
+        .square:nth-child(4) {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        }
+
+        .square:nth-child(n + 5):nth-child(-n + 7) {
+            background-image: linear-gradient(rgb(255, 60, 118), rgb(239, 22, 87));
+            clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+        }
+
+        #img {
+            position: absolute;
+            top: 180px;
+            left: 50px;
+            z-index: 10;
+        }
+
+        .clickme-box {
+            background-color: #f2f2f2;
+            border: 4px solid #00b0f0;
+            padding: 20px;
+            box-shadow: 0px 10px 15px 7px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: none;
+            position: absolute; /* Added position absolute */
+            top: 100px; /* Align with the top of the container */
+            left: 200px; /* Adjust this value to position it correctly */
+        }
+
+        .modal {
+            display: none;
+            background-color: white;
+            border: 3px solid #0070c0;
+            position: absolute;
+            border-radius: 10px;
+            top: 290px;
+            left: 490px;
+            width:400px;
+            padding: 30px;
+            z-index: 11;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .text-blue {
+            color: #0070c0;
+        }
+
+        .s-active, .s-g-active, .s-p-active{
+            background-image: linear-gradient(rgb(231, 231, 231), #00b0f0);
+        }
+
+        .s-p-active {
+            background-image: linear-gradient(rgb(231, 231, 231), rgb(255, 45, 108));
+        }
+
+        .s-g-active {
+            background-image: linear-gradient(rgb(231, 231, 231), rgb(26, 251, 26));
+        }
+
+        .clickme {
+            position: absolute;
+            top: 0; /* Align with the top of the container */
+            left: 400px; /* Adjust this value to position it correctly */
+        }
+
+       
+
+        #project, #docs, #collab, #code, #non-code, #tools {
+            position: absolute;
+            top: 0; /* Align with the top of the container */
+        }
+
+      
+
+        #project {
+            left: 520px;
+        }
+
+        #docs {
+            left: 680px;
+        }
+
+        #collab {
+            left: 840px;
+        }
+
+        #code {
+            left: 400px;
+        }
+
+        #non-code {
+            left: 190px;
+            width: 40%;
+            border: 3px solid;
+        }
+
+        #tools {
+            left: 400px;
+            width: 40%;
+            border: 3px solid rgb(26, 251, 26);
+        }
+
+        #see-prog-modal, #non-code-modal, #tools-modal-git {
+            display: none;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 500px;
+            height: 200px;
+            background-color: white;
+            border: 3px solid rgb(255, 8, 144);
+            position: absolute;
+            left: 80px;
+            z-index: 12;
+        }
+
+        #non-code-modal img, #tools-modal-git img, #see-prog-modal img {
+            width: 80px;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 150px;
+        }
+
+        .border-pink {
+            border: 3px solid rgb(255, 45, 108);
+        }
+
+        .text-pink {
+            color: rgb(255, 45, 108);
+        }
+
+        .border-green {
+            border: 3px solid rgb(24, 211, 24);
+        }
+
+        .text-green {
+            color: rgb(24, 211, 24);
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .square {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            #img {
+                top: auto;
+                bottom: 20px;
+            }
+
+            .clickme-box, .modal {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="step1" class="square s-active"></div>
+        <div id="step2" class="square"></div>
+        <div id="step3" class="square"></div>
+        <div id="step4" class="square"></div>
+        <div id="step5" class="square"></div>
+        <div id="step6" class="square"></div>
+        <div id="step7" class="square green"></div>
+    </div>
+    <div id="img">
+        <img id="eve" src="images/EVE-icon.png">
+    </div>
+    <div class="community content">
+        <div id="community" class="clickme-box active">
+            <h2>Contributor.io > <span class="text-blue">COMMUNITY</span></h2>
+            <ul>
+                <li>Join the community</li>
+                <li id="comm-understand">Understand the community</li>
+            </ul>
+        </div>
+        <div id="comm-modal" class="modal">
+            <p>Open-source communities are built on a foundation of collaboration, inclusivity, and diversity...</p>
+            <button id="close1">Close</button>
+        </div>
+    </div>
+    <div class="projects">
+        <div id="project" class="clickme-box">
+            <h2>Contributor.io > <span class="text-blue">PROJECT</span></h2>
+            <ul>
+                <li id="project-choose">Choose a Project</li>
+                <li id="project-understand">Understand the Project</li>
+                <li id="project-join">Why should I Join?</li>
+            </ul>
+        </div>
+        <div id="proj-choose-modal" class="modal">
+            <p><span class="light-grey"> CNCF Resources > </span> <span class="text-blue">PROJECTS</span></p>
+            <ul>
+                <li>Projects</li>
+                <li>Templates</li>
+                <li><b>CNCF Landscape</b></li>
+            </ul>
+            <button id="close2">Close</button>
+        </div>
+    </div>
+    <div class="documentation">
+        <div id="documentation" class="clickme-box">
+            <h2>Contributor.io > <span class="text-blue">DOCUMENTATION</span></h2>
+            <ul>
+                <li id="docs-read">Read The Documentation</li>
+                <li id="docs-lang">A Language on their own</li>
+                <li id="docs-start">Start small</li>
+            </ul>
+        </div>
+        <div id="docs-modal-lang" class="modal">
+            The open source community can sometimes be overwhelming with its acronyms and technical terms. Newcomers might find it difficult to keep up with the jargon...
+            <button id="close3">Close</button>
+        </div>
+    </div>
+    <div class="collab">
+        <div id="collab" class="clickme-box">
+            <h2>Contributor.io > <span class="text-blue">ASKING FOR HELP</span></h2>
+            <ul>
+                <li id="collab-others">Collaborate with others</li>
+                <li id="collab-help">Asking for help</li>
+            </ul>
+        </div>
+        <div id="collab-modal-help" class="modal">
+            Getting help from other contributors is a critical aspect of contributing to open source projects...
+            <button id="close4">Close</button>
+        </div>
+    </div>
+    <div class="code">
+        <div id="code" class="clickme-box">
+            <h2>Contributor.io > <span class="text-pink">CODE CONTRIBUTION</span></h2>
+            <ul>
+                <li id="code-programming">Programming Languages</li>
+                <li id="code-testing">Testing</li>
+            </ul>
+        </div>
+        <div id="code-modal-programming" class="modal">
+            If you’re a technical contributor, there are some specific tools and technologies that you should be familiar with...
+            <li id="see-prog">Check out languages commonly used in CNCF</li>
+            <button id="close5">Close</button>
+        </div>
+    </div>
+    <div id="see-prog-modal" class="modal">
+        <div class="flex-col">
+            <img src="images/Go-Logo_Blue.png"/>
+            <h4>Go</h4>
+        </div>
+        <div class="flex-col">
+            <img src="images/c-lang-logo.png"/>
+            <h4>C language</h4>
+        </div>
+        <div class="flex-col">
+            <img src="images/html-logo.png"/>
+            <h4>HTML</h4>
+        </div>
+        <button id="close6">Close</button>
+    </div>
+    <div class="non-code">
+        <div id="non-code" class="clickme-box">
+            <h2><span class="text-pink">NON-CODE CONTRIBUTION</span></h2>
+            <li id="waystocontribute">Even if you’re not a technical contributor, there are still many ways you can contribute to open source. Here are some of the key skills you’ll need:</li>
+        </div>
+        <div id="non-code-modal" class="modal">
+            <div class="flex-col">
+                <img src="images/document-icon.png"/>
+                <h4>Documentation</h4>
+            </div>
+            <div class="flex-col">
+                <img src="images/design-icon.png"/>
+                <h4>Design</h4>
+            </div>
+            <div class="flex-col">
+                <img src="images/message-icon.png"/>
+                <h4>Translate</h4>
+            </div>
+            <button id="close7">Close</button>
+        </div>
+    </div>
+    <div class="tools">
+        <div id="tools" class="clickme-box">
+            <h2>Contributor.io > <span class="text-green">TOOLS OF THE TRADE</span></h2>
+            <li id="git">Git</li>
+        </div>
+        <div id="tools-modal-git" class="modal">
+            <div class="flex-col">
+                <img src="images/bitbucket-logo.png"/>
+                <h4>Learn Git with </br> BitBucket cloud</h4>
+            </div>
+            <div class="flex-col">
+                <img src="images/w3-logo.png"/>
+                <h4>Git Tutorial</h4>
+            </div>
+            <div class="flex-col">
+                <img src="images/github-logo.png"/>
+                <h4>Set up Git</h4>
+            </div>
+            <div class="flex-col">
+                <img src="images/github-logo.png"/>
+                <h4>Contributing to Projects</h4>
+            </div>
+            <button id="close8">Close</button>
+        </div>
+    </div>
+    <div class="move">
+        <button id="next">Next</button>
+        <button id="prev">Prev</button>
+
+    </div>
+</body>
+<script>
+    const modals = document.querySelectorAll('.modal');
+    const clickmeBoxes = document.querySelectorAll('.clickme-box');
+    const closeButtons = document.querySelectorAll('[id^="close"]');
+    const squares = document.querySelectorAll('.square');
+    const img = document.getElementById('img');
+    const eve = document.getElementById('eve');
+    const next = document.getElementById('next');
+    const seeProg = document.getElementById('see-prog');
+    const seeProgModal = document.getElementById('see-prog-modal');
+    const git = document.getElementById('git');
+    const waystocontribute = document.getElementById('waystocontribute');
+
+    // Define an array of section IDs and their corresponding step numbers
+    const sectionSteps = [
+        { id: 'community', step: 1 },
+        { id: 'project', step: 2 },
+        { id: 'documentation', step: 3 },
+        { id: 'collab', step: 4 },
+        { id: 'code', step: 5 },
+        { id: 'non-code', step: 6 },
+        { id: 'tools', step: 7 },
+    ];
+
+    seeProg.addEventListener('click', () => showModal(seeProgModal));
+    git.addEventListener('click', () => showModal(toolsModalGit));
+    waystocontribute.addEventListener('click', () => showModal(nonCodeModal));
+
+    for (let i = 0; i < clickmeBoxes.length; i++) {
+        clickmeBoxes[i].addEventListener('click', () => showModal(modals[i]));
+        closeButtons[i].addEventListener('click', () => closeModal(modals[i]));
+    }
+
+     next.addEventListener('click', () => {
+        for (let i = 0; i < squares.length; i++) {
+            if (squares[i].classList.contains('s-active') || squares[i].classList.contains('s-p-active')) {
+                squares[i].classList.remove('s-active', 's-p-active');
+                squares[i + 1].classList.add('s-active');
+                img.style.left = `${205 * (i + 1)}px`; // Updated this line
+                if (i === 4) {
+                    eve.src = "images/eve3.png";
+                } else if (i === 5) {
+                    eve.src = "images/eve2.png";
+                } else {
+                    eve.src = "images/EVE-icon.png";
+                }
+                break;
+            }
+        }
+
+        const currentStep = Array.from(squares).findIndex((square) => square.classList.contains('s-active')) + 1;
+
+        for (const section of sectionSteps) {
+            const sectionElement = document.getElementById(section.id);
+            if (section.step === currentStep) {
+                sectionElement.style.display = 'block';
+                sectionElement.style.top = `${180}px`;
+            } else {
+                sectionElement.style.display = 'none';
+            }
+        }
+    });
+
+    const prev = document.getElementById('prev'); // Add a reference to the "Previous" button
+
+    prev.addEventListener('click', () => {
+        for (let i = 0; i < squares.length; i++) {
+            if (squares[i].classList.contains('s-active') || squares[i].classList.contains('s-p-active')) {
+                squares[i].classList.remove('s-active', 's-p-active');
+                squares[i - 1].classList.add('s-active');
+                img.style.left = `${1 * (i - 1)}px`; // Updated this line
+                if (i === 1) {
+                    eve.src = "images/eve2.png";
+                } else if (i === 4) {
+                    eve.src = "images/eve4.png";
+                } else {
+                    eve.src = "images/EVE-icon.png";
+                }
+                break;
+            }
+        }
+
+        const currentStep = Array.from(squares).findIndex((square) => square.classList.contains('s-active')) + 1;
+
+        for (const section of sectionSteps) {
+            const sectionElement = document.getElementById(section.id);
+            if (section.step === currentStep) {
+                sectionElement.style.display = 'block';
+                sectionElement.style.top = `${200}px`;
+            } else {
+                sectionElement.style.display = 'none';
+            }
+        }
+    });
+
+    function showModal(modal) {
+        modal.style.display = 'block'; // Changed display property to 'block'
+    }
+
+    function closeModal(modal) {
+        modal.style.display = 'none';
+    }
+</script>
+
+
+</html>
