@@ -291,3 +291,23 @@ p, li{
                             border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
                         }
                       }
+.nav-white > li > a{
+  color:white;
+}
+.padding-22 > * {
+  padding: 22.5px;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color:white;
+}
