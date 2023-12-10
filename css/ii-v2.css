@@ -311,3 +311,10 @@ p, li{
   padding: 0;
   color:white;
 }
+.sponsors{
+  width:100%;
+  background-image: url("../images/Sponsors-1440-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
